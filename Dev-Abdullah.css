@@ -1,0 +1,833 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+.bg-light {
+  background-color: #f8fafc;
+}
+
+/* عنوان الأقسام */
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.section-title i {
+  color: #2563eb;
+  font-size: 1.4rem;
+}
+
+.section-title h2 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+/* شريط التنقل (Navbar) */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  padding-bottom: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo i {
+  color: #2563eb;
+}
+
+/* القسم الرئيسي (Hero) */
+.hero {
+  background:
+    linear-gradient(
+      to left,
+      #ffffff 45%,
+      rgba(255, 255, 255, 0.85) 65%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=80")
+      center/cover no-repeat;
+  padding: 70px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-profile {
+  text-align: center;
+}
+
+.avatar-wrapper {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto 15px;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote {
+  font-size: 0.9rem;
+  color: #334155;
+  font-weight: 600;
+  transform: rotate(-8deg);
+}
+
+.quote-line {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #3b82f6;
+  margin: 4px auto 0;
+  border-radius: 2px;
+}
+
+.hero-text .greeting {
+  font-size: 1.1rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin: 5px 0;
+}
+
+.hero-text .specialty {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-text .bio {
+  color: #475569;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-outline {
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  background-color: #fff;
+}
+
+.btn-outline:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* قسم من أنا (About) */
+/* =========================================
+   قسم نبذة عني (مطابق للصورة تماماً)
+   ========================================= */
+
+/* 1. توسيط العناوين والخط الأزرق فقط في المنتصف */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* الخط الأزرق في المنتصف */
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #2563eb;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+.section-header h5 {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* 2. النصوص والقائمة جهة اليمين مثل الصورة الثانية */
+.about-content {
+  text-align: right; /* محاذاة جهة اليمين */
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  color: #334155;
+  font-size: 1.05rem;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+/* تمييز كلمة نظم المعلومات الإدارية بالأزرق الغامق */
+.highlight {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.about-content h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 25px 0 15px;
+}
+
+/* القائمة المرقمة جهة اليمين بترتيبها الطبيعي */
+.ordered-list {
+  text-align: right;
+  padding-right: 25px;
+  padding-left: 0;
+  margin: 0;
+  color: #334155;
+}
+
+.ordered-list li {
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   قسم خلفيتي التعليمية ومؤهلاتي (جدول التعليم)
+   ========================================= */
+
+/* حاوية الجدول لجعل الحواف دائرية ومنظمة */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  margin-top: 30px;
+}
+
+/* تنسيق الجدول */
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+}
+
+/* ترويسة الجدول والخلفية الرمادية الفاتحة */
+.edu-table thead tr {
+  background-color: #f1f5f9;
+}
+
+.edu-table th {
+  padding: 18px 24px;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* خلايا البيانات والحدود الفاصلة */
+.edu-table td {
+  padding: 18px 24px;
+  color: #334155;
+  font-size: 0.92rem;
+  border-bottom: 1px solid #f8fafc;
+  vertical-align: middle;
+}
+
+.edu-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* شارات الحالة الدائرية (Badges) */
+.status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* الشارة الزرقاء (مستمر) */
+.status-badge.current {
+  background-color: #e0edff;
+  color: #2563eb;
+}
+
+/* الشارة الخضراء (مكتمل / منجز) */
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+/* قسم مهاراتي (Skills) */
+/* ترويسة القسم والخط الأزرق */
+.skills .section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.skills .section-header h2 {
+  font-size: 2.3rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.skills .section-header h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #2563eb;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+.skills .section-header h5 {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+/* توزيع البطاقات الأربع بجانب بعضها */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* تصميم بطاقة المهارة */
+.skill-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* حجم الأيقونة */
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* عنوان المهارة */
+.skill-card h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+/* نص وصف المهارة */
+.skill-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ترويسة العنوان والخط الأزرق في المنتصف */
+.interests .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* شبكة 4 بطاقات متساوية بجانب بعضها */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+
+/* تصميم البطاقة: النص يميناً والأيقونة يساراً */
+.interest-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto; /* عمود للنصوص يميناً وعمود للأيقونة يساراً */
+  align-items: center;
+  gap: 6px 12px;
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+  transform: translateY(-3px);
+}
+
+.interest-card h4 {
+  grid-column: 1;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.interest-card p {
+  grid-column: 1;
+  margin: 0;
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* الأيقونة جهة اليسار بلون أزرق وبدون دوائر ملونة خلفها */
+.interest-card .interest-icon {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  font-size: 1.9rem;
+  color: #2563eb !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.interest-card .interest-icon i {
+  color: #2563eb !important;
+}
+
+/* التجاوب مع شاشات الجوال والتابلت */
+@media (max-width: 992px) {
+  .interests-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* قسم مشاريعي (Projects) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 350px));
+  justify-content: center;
+  gap: 25px;
+}
+
+/* تنسيق المربع لكل مشروع */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* صندوق الأيقونة الدائري في أعلى كل مشروع */
+.project-icon-box {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ألوان خلفيات الأيقونات */
+.bg-blue-light {
+  background-color: #dbeafe;
+}
+.bg-green-light {
+  background-color: #d1fae5;
+}
+.bg-orange-light {
+  background-color: #fef3c7;
+}
+
+/* نصوص المشروع */
+.project-info h4 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* رابط عرض المشروع */
+.project-link {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.project-link:hover {
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   قسم اتصل بنا (متوافق مع كود HTML الخاص بك 100%)
+   ========================================= */
+
+/* البطاقة الحاوية للنموذج والمعلومات مع صورة الخلفية */
+.contact-wrapper {
+  background: 
+    linear-gradient(to left, rgba(255, 255, 255, 0.96) 55%, rgba(255, 255, 255, 0.78) 100%),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80")
+    left center/cover no-repeat;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 45px;
+  display: flex;
+  align-items: flex-start;
+  gap: 45px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  margin-top: 25px;
+}
+
+/* عمود معلومات التواصل المباشر (يمين) */
+.contact-wrapper .contact-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  padding-left: 35px;
+  border-left: 1px solid #e2e8f0; /* الخط الفاصل الرأسي بين القسمين */
+}
+
+.contact-wrapper .contact-details h5 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 22px;
+}
+
+.contact-wrapper .contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #334155;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.contact-wrapper .contact-details p i {
+  color: #2563eb;
+  font-size: 1.1rem;
+}
+
+.contact-wrapper .contact-details h6 {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:nth-child(1) {
+  color: #24292f;
+}
+
+.social-icons a:nth-child(2) {
+  color: #0a66c2;
+}
+
+.social-icons a:nth-child(3) {
+  color: #e4405f;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+
+/* عمود النموذج (يسار) */
+.contact-form {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: right;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #334155;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.92);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* زر الإرسال في أقصى اليسار كما في الصورة */
+.submit-btn {
+  align-self: flex-end;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+/* الفوتر (Footer) */
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .logo {
+  color: #fff;
+}
+
+
+@media (max-width: 850px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .contact-wrapper .contact-details {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 25px;
+    border-left: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dev-Abdullah</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- استدعاء مكتبة الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="Dev-Abdullah.css">
+</head>
+
+<body>
+    <!--شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo" dir="ltr">
+                <i class="fa-solid fa-code"></i> <span>Dev Abdullah</span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-profile">
+                <div class="avatar-wrapper">
+                    <img src="https://www.pngarts.com/files/10/Default-Profile-Picture-PNG-Download-Image.png"
+                        alt="Personal Photo">
+                </div>
+                <div class="quote">
+                    "طموح اليوم<br>هو إنجاز الغد"
+                    <span class="quote-line"></span>
+                </div>
+            </div>
+
+            <div class="hero-text">
+                <p class="greeting">Hello, I'm</p>
+                <h1>Abdullah Saeed Ali Bin Omar</h1>
+                <h3 class="specialty">طالب نظم المعلومات الإدارية (MIS)</h3>
+                <p class="bio">
+                    أهلاً بك! أنا طالب في السنة الثالثة بجامعة الريان بمدينة المكلا. أجمع بين دراسة النظم الإدارية وشغف
+                    البرمجة وحلول قواعد البيانات.<br>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-folder"></i> مشاريعي</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fa-regular fa-envelope"></i> تواصل معي</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>نبذة عني</h2>
+                <h5>الرؤية والهدف الاكاديمي والمهني</h5>
+
+            </div>
+
+            <div class="about-content">
+                <p>
+                    أدرس <span class="highlight">نظم المعلومات الإدارية (MIS)</span> وهو التخصص الذي يجمع بين الإدارة
+                    وتقنية المعلومات، وأسعى من خلاله إلى بناء خبرة عملية في وتحليل وتصميم الأنظمة، وإدارة قواعد
+                    البيانات، الويب.
+                </p>
+
+                <h4>المسارات التي اركز عليها حاليا :</h4>
+
+                <ol class="ordered-list">
+                    <li>إتقان استعلامات وهياكل قواعد البيانات وتصميم الـ ERD.</li>
+                    <li>تطوير واجهات الويب التفاعلية باستخدام معايير HTML و CSS.</li>
+                    <li>دراسة آليات تحليل وتخطيط المشاريع البرمجية والإدارية.</li>
+
+                </ol>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="education" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>خلفيتي التعليمية ومؤهلاتي</h2>
+                <h5>المسار الاكاديمي والشهادات</h5>
+            </div>
+
+            <div class="table-responsive">
+                <table class="edu-table">
+                    <thead>
+                        <tr>
+                            <th>المؤهل</th>
+                            <th>المؤسسة التعليمية</th>
+                            <th>المكان</th>
+                            <th>السنه/الحالة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> بكالوريوس نظم المعلومات الادارية (MIS)</td>
+                            <td>جامعة الريان</td>
+                            <td> المكلا,اليمن</td>
+                            <td> <span class="status-badge current"> السنة الثالثة (مستمر)</span></td>
+                        </tr>
+                        <tr>
+                            <td>شهادة الثانوية العامة -القسم عام</td>
+                            <td>ثانوية اليمامة</td>
+                            <td> المملكة العربية السعودية,الرياض</td>
+                            <td> <span class="status-badge completed"> مكتمل بتفوق</span></td>
+                        </tr>
+                        <tr>
+                            <td>دورات معتمدة في قواعد البيانات وبرمجة بايثون</td>
+                            <td>منصات تعليمية ذاتية ومشاريع علمية</td>
+                            <td>عبر الانترنت</td>
+                            <td> <span class="status-badge completed"> منجز</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- قسم مهاراتي -->
+    <section id="skills" class="skills section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>مهاراتي</h2>
+                <h5>القدرات التقنية والشخصية</h5>
+            </div>
+
+            <div class="skill-grid">
+                <!-- مهارة 1 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-database" style="color: #2563eb;"></i>
+                    </div>
+                    <h4>قواعد البيانات (SQL)</h4>
+                    <p>تصميم الجداول، العلاقات، والاستعلامات.</p>
+                </div>
+
+                <!-- مهارة 2 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-html5" style="color: #e34f26;"></i>
+                    </div>
+                    <h4>HTML & CSS</h4>
+                    <p>بناء وتنسيق صفحات ويب.</p>
+                </div>
+
+                <!-- مهارة 3 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-python" style="color: #eab308;"></i>
+                    </div>
+                    <h4>برمجة Python</h4>
+                    <p>كتابة اكواد بستخدام لغة Python.</p>
+                </div>
+
+                <!-- مهارة 4 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-microsoft" style="color: #6366f1;"></i>
+                    </div>
+                    <h4>حزمة Microsoft Office</h4>
+                    <p>إدارة البيانات وجداول Excel والعروض التقديمية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--قسم اهتماماتي-->
+
+    <section id="interests" class="interests section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>الهوايات والاهتمامات</h2>
+                <h5>كيف أقضي وقت فراغي خارج أوقات الدراسة</h5>
+            </div>
+
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon bg-orange-light">
+                        <i class="fa-solid fa-dumbbell" style="color: #f59e0b;"></i>
+                    </div>
+                    <h4>الرياضة</h4>
+                    <p>أحب ممارسة الرياضة وتحقيق الأهداف الصحية.</p>
+                </div>
+
+
+                <div class="interest-card">
+                    <div class="interest-icon bg-blue-light">
+                        <i class="fa-solid fa-chart-line" style="color: #3b82f6;"></i>
+                    </div>
+                    <h4>التقنية</h4>
+                    <p>مواكبة كل جديد في عالم التكنولوجيا.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon bg-indigo-light">
+                        <i class="fa-solid fa-book-open" style="color: #6366f1;"></i>
+                    </div>
+                    <h4>القراءة</h4>
+                    <p>أحب قراءة الكتب وتوسيع معرفتي.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon bg-green-light">
+                        <i class="fa-solid fa-gamepad" style="color: #10b981;"></i>
+                    </div>
+                    <h4>الالعاب</h4>
+                    <p>أحب لعب الألعاب وتحدي نفسي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-title">
+                <i class="fa-regular fa-folder-open"></i>
+                <h2>مشاريعي</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- مشروع 1 -->
+                <div class="project-card">
+                    <div class="project-icon-box bg-blue-light">
+                        <i class="fa-solid fa-database" style="color: #2563eb;"></i>
+                    </div>
+                    <div class="project-info">
+                        <h4> قاعدة بيانات</h4>
+                        <p>تصميم قاعدة بيانات مصغرة لمدرسة</p>
+                        <a href="https://github.com/abdullahbinomarmis-2024/School-database" class="project-link">عرض
+                            المشروع <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- مشروع 2 -->
+                <div class="project-card">
+                    <div class="project-icon-box bg-green-light">
+                        <i class="fa-solid fa-calculator" style="color: #10b981;"></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>حاسبة بسيطة</h4>
+                        <p>تطبيق حاسبة بواجهة تفاعلية مصممة c# بلغة.</p>
+                        <a href="https://github.com/abdullahbinomarmis-2024/Calculator-pr" class="project-link">عرض
+                            المشروع <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- قسم التواصل -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>اتصل بنا</h2>
+                <h5>يسعدني تلقي استفساراتك ورسائلك</h5>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-details">
+                    <!-- العنوان h5 لتغطية كافة متطلبات h1-h6 -->
+                    <h5>معلومات التواصل المباشر</h5>
+                    <h6>تواصل معي عبر الوسائل التالية</h6>
+                    <p><i class="fa-solid fa-envelope"></i> البريد: abdullahbinomar.mis@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> الموقع: حضرموت - المكلا، اليمن</p>
+
+                    <div class="social-icons">
+                        <a href="https://github.com/abdullahbinomarmis-2024" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" title="github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/abdullah-saeed-bin-omar-93b248419/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" title="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/abqx_77?utm_source=qr&srtk=MWljMnNlOWd2bXdndw=="
+                            target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- نموذج الاتصال (Form) بجميع عناصره المطلوبة -->
+                <form class="contact-form" method="POST">
+
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الكريم" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">عنوان البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">الموضوع:</label>
+                        <input type="text" id="subject" name="subject" placeholder="موضوع الرسالة" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">الرسالة:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك بالتفصيل هنا..."
+                            required></textarea>
+                    </div>
+
+                    <!-- زر الإرسال -->
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2026 Dev Abdullah. جميع الحقوق محفوظة.
+            </div>
+            <div class="footer-quote">
+                "طموح اليوم هو إنجاز الغد"
+            </div>
+            <div class="logo" dir="ltr">
+                <i class="fa-solid fa-code"></i><span> Dev Abdullah</span>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
